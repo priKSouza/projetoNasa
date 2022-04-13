@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/index.js" defer></script>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Projeto Nasa</title>
-</head>
-<body>
-    <!-- <div id="info"></div> -->
-    <form id="form">
-        <input type="date">
+  </head>
+  <body>
+    <header>
+      <h2>Aqui vai o nome da página</h2>
+    </header>
+
+    <form id="btn-data">
+      <input type="date" id="data" min="1995-06-16" />
+      <input type="button" value="Clique aqui" id="btn" />
     </form>
-</body>
+
+      <div id="box-img">
+        <img src="" alt="" id="img" />
+        <iframe src="" frameborder="0" width="650px" height="450px" id="video"></iframe>
+      </div>
+
+      <div id="box-text">
+        <h2 id="title"></h2>
+        <p id="text-img"></p>
+      </div>
+
+    <footer>
+      <p>Desenvolvido por <a class="link" href="https://github.com/priKSouza" target="_blanck">Priscila Souza</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

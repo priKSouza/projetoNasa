@@ -1,35 +1,34 @@
-function apod() {
-  fetch(
-    "https://api.nasa.gov/planetary/apod?api_key=OTlCuYyed4ScWgwpaR0TYpHASKNnj4qOCAs08vsS").then((res) => res.json())
-    .then((json) => {
-      /* let div = document.createElement("div");
+$("#btn").click(function (event) {
+  event.preventDefault("");
+  imgNasa();
+});
 
-      let image = document.createElement('img')
-      image.setAttribute('id', 'img')
-      image.src = json.url
-      image.setAttribute('width', '100%')
-      div.append(image)
+function imgNasa() {
+  const date = $("#data").val();
+  const title = $("#title");
+  const img = $("#img");
+  const video = $("#video");
+  const textImg = $("#text-img");
 
-      let title = document.createElement('p')
-      title.innerHTML = json.title + `<br>` + json.date
-      title.style.fontWeight = 'bolder'
-      div.append(title)
-
-      let info = document.createElement('p')
-      info.innerHTML = json.explanation
-      div.append(info)
-
-      let foto = document.createElement('a')
-      foto_name = json.copyright
-      foto.innerHTML = foto_name
-    //   foto.href = 
-    foto.setAttribute = ('target', '_blanck')
-    foto.style.color = 'lightblue'
-    foto.style.textDecoration = 'none'
-    div.append(foto)
-
-    document.querySelector("#info").append(div) */
-    });
+  $.ajax({
+    url: `https://api.nasa.gov/planetary/apod?api_key=OTlCuYyed4ScWgwpaR0TYpHASKNnj4qOCAs08vsS&date=${date}`,
+    success: function (resposta) {
+      if (resposta.media_type == "image") {
+        img.show();
+        video.hide();
+        $("#box-text").css("visibility", "visible");
+        title.text(resposta.title);
+        textImg.text(resposta.explanation);
+        img.attr("src", resposta.url);
+      } else {
+        img.hide();
+        video.show();
+        $("#box-text").css("visibility", "visible");
+        title.text(resposta.title);
+        title.text(resposta.title);
+        textImg.text(resposta.explanation);
+        video.attr("src", resposta.url);
+      }
+    },
+  });
 }
-
-apod();
