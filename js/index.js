@@ -9,6 +9,7 @@ function imgNasa() {
   const img = $("#img");
   const video = $("#video");
   const textImg = $("#text-img");
+  const direitos = $("#direitos");
 
   $.ajax({
     url: `https://api.nasa.gov/planetary/apod?api_key=OTlCuYyed4ScWgwpaR0TYpHASKNnj4qOCAs08vsS&date=${date}`,
@@ -19,6 +20,7 @@ function imgNasa() {
         $("#box-text").css("visibility", "visible");
         title.text(resposta.title);
         textImg.text(resposta.explanation);
+        direitos.text(resposta.copyright);
         img.attr("src", resposta.url);
       } else {
         img.hide();
@@ -27,6 +29,7 @@ function imgNasa() {
         title.text(resposta.title);
         title.text(resposta.title);
         textImg.text(resposta.explanation);
+        direitos.text(resposta.copyright);
         video.attr("src", resposta.url);
       }
     },

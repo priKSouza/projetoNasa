@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,14 +7,22 @@
 }
 
 body {
-  background-color: black;
-  font-family: "Nunito Sans", sans-serif;
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
-  color: brown;
+  color: #00c9a7;
   text-align: center;
   margin: 20px;
+}
+
+.titulo-principal {
+  margin: 20px;
+}
+
+.descubra {
+  margin: 10px;
 }
 
 #btn-data {
@@ -33,10 +41,19 @@ header {
 }
 
 #btn {
+  margin-top: 10px;
   width: 100px;
   height: 30px;
   border-radius: 10px;
   border: none;
+  background-color: #00c9a7;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: #98b0a9;
+  transition: 1s;
 }
 
 .box-principal {
@@ -49,6 +66,7 @@ header {
 }
 
 #img {
+  margin: 20px;
   width: auto;
   height: auto;
   max-width: 350px;
@@ -64,11 +82,17 @@ header {
   align-items: center;
   text-align: center;
   width: 400px;
-  box-shadow: 1px 1px 10px 5px gray;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px 5px #00c9a7;
+}
+
+#direitos {
+  font-style: italic;
 }
 
 footer {
-  color: #fff;
+  margin: 20px;
+  color: #98b0a9;
   text-align: center;
 }
 
@@ -79,5 +103,5 @@ footer {
 
 .link::after {
   content: " ❤";
-  color: red;
+  color: #feba00;
 }

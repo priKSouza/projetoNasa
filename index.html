@@ -9,12 +9,17 @@
   </head>
   <body>
     <header>
-      <h2>Aqui vai o nome da página</h2>
+      <h2 class="titulo-principal">APOD | Astronomy Picture of the Day</h2>
+      <p>
+        Descubra a foto astronômica do dia que desejar.<br />
+        <small>Obs: A data mínima é a partir do dia 16/06/1995</small>
+      </p>
+      <p class="descubra">Digite uma data e clique em "Descubra".</p>
     </header>
 
     <form id="btn-data">
       <input type="date" id="data" min="1995-06-16" />
-      <input type="button" value="Clique aqui" id="btn" />
+      <input type="button" value="Descubra" id="btn" />
     </form>
 
     <section class="box-principal">
@@ -23,23 +28,29 @@
         <iframe
           src=""
           frameborder="0"
-          width="650px"
-          height="450px"
+          width="400px"
+          height="350px"
           id="video"
         ></iframe>
       </div>
 
       <div id="box-text">
         <h2><span id="title"> </span></h2>
-        <p style="padding: 10px;"><span id="text-img"> </span></p>
+        <p style="padding: 10px"><span id="text-img"> </span></p>
+        <small id="direitos"></small>
       </div>
     </section>
     <footer>
       <p>
-        Desenvolvido por
-        <a class="link" href="https://github.com/priKSouza" target="_blanck"
+        &copy; Desenvolvido por
+        <a
+          title="GitHub Priscila"
+          class="link"
+          href="https://github.com/priKSouza"
+          target="_blanck"
           >Priscila Souza</a
         >
+        | Projeto Códigos do Amanhã
       </p>
     </footer>
 
