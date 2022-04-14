@@ -8,7 +8,7 @@ function imgNasa() {
   const title = $("#title");
   const img = $("#img");
   const video = $("#video");
-  const textImg = $("#text-img");
+  // const textImg = $("#text-img");
   const direitos = $("#direitos");
 
   $.ajax({
@@ -19,7 +19,7 @@ function imgNasa() {
         video.hide();
         $("#box-text").css("visibility", "visible");
         title.text(resposta.title);
-        textImg.text(resposta.explanation);
+        // textImg.text(resposta.explanation); preferi exibir apenas o titulo do registro
         direitos.text(resposta.copyright);
         img.attr("src", resposta.url);
       } else {
@@ -27,8 +27,7 @@ function imgNasa() {
         video.show();
         $("#box-text").css("visibility", "visible");
         title.text(resposta.title);
-        title.text(resposta.title);
-        textImg.text(resposta.explanation);
+        // textImg.text(resposta.explanation);
         direitos.text(resposta.copyright);
         video.attr("src", resposta.url);
       }
